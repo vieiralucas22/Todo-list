@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --bg-color: #2b3035;
+  --font-color: #f1f5f9;
+  --primary-color: #369159;
+}
+body {
+  background-color: var(--bg-color);
+  font-size: 1.3rem;
+}
+#main {
+  margin: 3rem auto;
+  max-width: 40rem;
+  padding: 1.5rem;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+h3 {
+  color: var(--font-color);
+  font-size: 2rem;
+}
+.todo {
+  color: var(--primary-color);
+  font: 2rem;
+}
+.empty {
+  width: 5rem;
+}
+#switchTheme {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem;
+  color: var(--font-color);
+}
+#switchTheme:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+.fieldTaks {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+#inputTask {
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  height: 3rem;
+  width: 95%;
+  margin-right: 1.5rem;
+}
+#btnTask {
+  width: 10%;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  height: 3rem;
+  background-color: transparent;
+  color: var(--font-color);
+}
+#btnTask:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  color: var(--primary-color);
+  background-color: var(--bg-task);
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  margin-bottom: 2px;
+}
+.task p {
+  position: relative;
+  top: 7px;
+}
+.btnArea button {
+  height: 3rem;
+  font-size: 1.3rem;
+}
