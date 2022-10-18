@@ -83,10 +83,12 @@ h3 {
   position: relative;
   top: 7px;
 }
-.btnArea {
+.btnArea,
+.taskCheck {
   display: flex;
-  column-gap: 5px;
+  column-gap: 10px;
 }
+
 .btnArea button {
   height: 2.5rem;
   font-size: 1.1rem;
