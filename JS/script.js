@@ -1,9 +1,10 @@
 const btnCreateTask = document.getElementById("btnTask");
+let delets = document.querySelectorAll(".btnDelete");
+let inputTask = document.getElementById("inputTask");
 let contTask = 0;
 
-btnCreateTask.addEventListener("click", function () {
+function crateTask() {
   const areaTasks = document.getElementById("taskArea");
-  let inputTask = document.getElementById("inputTask");
 
   const taskLine = document.createElement("div");
   const checkboxTask = document.createElement("input");
@@ -24,10 +25,10 @@ btnCreateTask.addEventListener("click", function () {
     checkboxTask.type = "checkbox";
     checkboxTask.id = `check-${contTask}`;
     btnArea.classList.add("btnArea");
-    btnEdit.classList.add("btn", "btn-outline-warning");
+    btnEdit.classList.add("btn", "btn-outline-warning", "btnEdit");
     btnEdit.id = `editTask-${contTask}`;
     iconEdit.classList.add("bi", "bi-pencil");
-    btnDelete.classList.add("btn", "btn-outline-danger");
+    btnDelete.classList.add("btn", "btn-outline-danger", "btnDelete");
     btnDelete.id = `deleteTask-${contTask}`;
     iconDelete.classList.add("bi", "bi-trash");
 
@@ -40,9 +41,30 @@ btnCreateTask.addEventListener("click", function () {
     taskLine.append(divCheckTask, btnArea);
     areaTasks.appendChild(taskLine);
 
+    document
+      .getElementById(`deleteTask-${contTask}`)
+      .addEventListener("click", function () {
+        taskLine.remove();
+      });
+
+    // document
+    //   .getElementById(`editTask-${contTask}`)
+    //   .addEventListener("click", function () {});
+
+    if (`check-${contTask}:checked`) {
+    }
+
     contTask++;
     inputTask.value = "";
   } else {
     alert("Digite uma task!!!");
   }
+}
+
+inputTask.addEventListener("keydown", function (x) {
+  if (x.key == "Enter") {
+    crateTask();
+  }
 });
+
+btnCreateTask.addEventListener("click", crateTask);
