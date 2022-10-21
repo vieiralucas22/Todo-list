@@ -53,6 +53,7 @@ h3 {
   height: 3rem;
   width: 95%;
   margin-right: 1.5rem;
+  caret-color: var(--primary-color);
 }
 #btnTask {
   width: 13%;
@@ -88,8 +89,19 @@ h3 {
   display: flex;
   column-gap: 10px;
 }
+.taskCheck p {
+  margin-top: 2px;
+}
 
 .btnArea button {
   height: 2.5rem;
   font-size: 1.1rem;
+}
+.taskSuccess {
+  text-decoration: line-through;
+  color: var(--font-color);
+}
+.normalTask {
+  text-decoration: none;
+  color: var(--primary-color);
 }
